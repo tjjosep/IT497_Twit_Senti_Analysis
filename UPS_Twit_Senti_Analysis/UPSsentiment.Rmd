@@ -1,3 +1,16 @@
+
+
+
+IT 497 Fall 2014- Twitter Sentiment Analysis Assignment
+========================================================
+
+Can Twitter Predict Stock Price Movements?
+--------------------------------------------------------
+For five days, mine Twitter for tweets containing mentions of the following firms:
+
+
+| UPS             | Tony Joseph | 
+
 ```{r fig.width=7, fig.height=6, include=FALSE}
 library("reshape2")
 library(ggplot2)
@@ -16,19 +29,6 @@ yTotalPlot <- ggplot(data = SentiTab_long, aes(x = SDate, y = value,  group=vari
 #show(yTotalPlot);
 
 ```
-
-
-IT 497 Fall 2014- Twitter Sentiment Analysis Assignment
-========================================================
-
-Can Twitter Predict Stock Price Movements?
---------------------------------------------------------
-For five days, mine Twitter for tweets containing mentions of the following firms:
-
-
-| UPS             | Tony Joseph | 
-
-
 UPS
 ========================================================
 Number of tweets and corresponding score each day with closing stock price and change
@@ -71,4 +71,3 @@ UPS stock had a positive change during 3 days in the week where as UPS got posit
 [id4]: UPS4.png "Title"
 [id5]: UPS5.png "Title"
 [id6]: UPSStockPrice_vs_SentiScore.png "Title"
-
