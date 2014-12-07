@@ -8,7 +8,7 @@ For five days, mine Twitter for tweets containing mentions of the following firm
 | Firm            | Team Member |
 | :-------------  |:-------------
 | Netflix         | Name        | 
-| Google          | Name        | 
+| Google          | Rajneesh Kumar Pandey        | 
 | [UPS] [id3]     | Tony Joseph | 
 | Oracle          | Name        | 
 | Walmart         | Name        | 
