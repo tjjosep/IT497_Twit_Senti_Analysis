@@ -1,3 +1,6 @@
+
+
+
 IT 497 Fall 2014- Twitter Sentiment Analysis Assignment
 ========================================================
 
@@ -5,14 +8,22 @@ Can Twitter Predict Stock Price Movements?
 --------------------------------------------------------
 For five days, mine Twitter for tweets containing mentions of the following firms:
 
-| Tony Joseph            | |
-| :---------    |:------------|
-|               |             | 
 
+| UPS             | Tony Joseph | 
 
 
 UPS
 ========================================================
+Number of tweets and corresponding score each day with closing stock price and change
+--------------------------------------------
+| Date            | Total Tweets  |Sentiment Score|Price  |Change |       |
+| :-------------  |-------------: |-------------: |------:|------:|------:|
+| 2014/11/28 Fri  |     -         |      -        | 51.74 |    -  |       | 
+| 2014/12/01 Mon  |     400       |     -91       | 50.10 |-1.64      |       |
+| 2014/12/02 Tue  |     400       |     127       | 50.67 |.57        |       |
+| 2014/12/03 Wed  |     400       |     149       | 50.28 |-.39      |       |
+| 2014/12/04 Thu  |     400       |     145       | 50.41 |.13        |       |
+| 2014/12/05 Fri  |     400       |     225       | 50.99 |.58        |       |
 
 
 # The sentiment histograms
@@ -27,35 +38,10 @@ UPS
 ## 2014/12/05 Fri 
 ![alt text][id5]
 
-| Date            | Total Tweets  |Sentiment Score|Price  |Change |       |
-| :-------------  |-------------: |-------------: |------:|------:|------:|
-| 2014/11/28 Fri  |     -         |      -        | 51.74 |    -  |       | 
-| 2014/12/01 Mon  |     400       |     -91       | 50.10 |-1.64      |       |
-| 2014/12/02 Tue  |     400       |     127       | 50.67 |.57        |       |
-| 2014/12/03 Wed  |     400       |     149       | 50.28 |-.39      |       |
-| 2014/12/04 Thu  |     400       |     145       | 50.41 |.13        |       |
-| 2014/12/05 Fri  |     400       |     225       | 50.99 |.58        |       |
+## UPS Stock Price vs Sentiment Score
+![alt text][id6]
 
 
-```r
-library("reshape2")
-library(ggplot2)
-SDate <- as.Date(c('2014/12/01', '2014/12/02', '2014/12/03', '2014/12/04', '2014/12/05'))
-Score <-  c(-1, 1, 1, 1, 1)
-StockChange <- c(-1.64, .57, -.39, .13, .58)
-
-SentiTab <- data.frame(SDate, Score, StockChange)
-
-
-SentiTab_long <- melt(SentiTab, id="SDate")
-
-
-yTotalPlot <- ggplot(data = SentiTab_long, aes(x = SDate, y = value,  group=variable, colour=variable, size = 1)) +
-       geom_line()
-show(yTotalPlot);
-```
-
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
 Summary
 ========================================================
 UPS stock had a positive change during 3 days in the week where as UPS got positive score during 4 days in the week. There is only one day that stock change conflicts with the sentiment score. This study is not enough to conclude that stock prices will be influenced/reacted or trend relative to twitter sentiment score. There should be studies on more companies and over the period of time to find out the relativity. There was a difficulty in getting the UPS tweets for the past weeks. Twitter API gives error when fetching more than 400 tweets. This analysis based the score of day with its stock change on closing on same day with closing stock price of the previous day. The sentiment may not be immediately swing the stock prices, we may need to look a weeks sentiment score with the weekly change. Weekly sentiment may be more accurate comparing to the daily sentiment. Also the correlation will swing the stock price over the period of time across a week or two. If the question is can we make investments based on the sentiment analysis, then my answer is no. But this data can be used as a supporting factor for the daily trading decisions or short sells and buys over couple of weeks. I believe traders are already using the similar analytics to verify or double check the decisions which they already have. Twitter them selves must be selling the sentiment data to the companies and traders already.
@@ -67,5 +53,5 @@ UPS stock had a positive change during 3 days in the week where as UPS got posit
 [id3]: UPS3.png "Title"
 [id4]: UPS4.png "Title"
 [id5]: UPS5.png "Title"
-
+[id6]: UPSStockPrice_vs_SentiScore.png "Title"
 
