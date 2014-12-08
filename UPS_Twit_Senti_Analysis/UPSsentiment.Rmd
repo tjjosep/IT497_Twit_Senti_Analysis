@@ -11,24 +11,7 @@ For five days, mine Twitter for tweets containing mentions of the following firm
 
 | UPS             | Tony Joseph | 
 
-```{r fig.width=7, fig.height=6, include=FALSE}
-library("reshape2")
-library(ggplot2)
-SDate <- as.Date(c('2014/12/01', '2014/12/02', '2014/12/03', '2014/12/04', '2014/12/05'))
-Score <-  c(-1, 1, 1, 1, 1)
-StockChange <- c(-1.64, .57, -.39, .13, .58)
 
-SentiTab <- data.frame(SDate, Score, StockChange)
-
-
-SentiTab_long <- melt(SentiTab, id="SDate")
-
-
-yTotalPlot <- ggplot(data = SentiTab_long, aes(x = SDate, y = value,  group=variable, colour=variable, size = 1)) +
-       geom_line()
-#show(yTotalPlot);
-
-```
 UPS
 ========================================================
 Number of tweets and corresponding score each day with closing stock price and change

@@ -27,6 +27,8 @@ library("twitteR")
 library("wordcloud")
 library("tm")
 library("ggplot2")
+library("reshape2")
+
 
 ## These are my codes for an application I created for this example.
 ## These codes will not work for you
@@ -343,4 +345,32 @@ sum(simple2.sentiment)
 sum(simple3.sentiment)
 sum(simple4.sentiment)
 sum(simple5.sentiment)
+
+
+###############################################################################
+##
+##   STOP
+##
+###############################################################################
+
+
+SDate <- as.Date(c('2014/12/01', '2014/12/02', '2014/12/03', '2014/12/04', '2014/12/05'))
+Score <-  c(-1, 1, 1, 1, 1)
+StockChange <- c(-1.64, .57, -.39, .13, .58)
+
+SentiTab <- data.frame(SDate, Score, StockChange)
+
+
+SentiTab_long <- melt(SentiTab, id="SDate")
+
+
+yTotalPlot <- ggplot(data = SentiTab_long, aes(x = SDate, y = value,  group=variable, colour=variable, size = 1)) +
+  geom_line()
+show(yTotalPlot);
+
+###############################################################################
+##
+##   STOP
+##
+###############################################################################
 
