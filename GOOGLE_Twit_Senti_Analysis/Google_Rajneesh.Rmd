@@ -92,7 +92,9 @@ sum(simple.sentiment)
 
 ```{r eval=TRUE,echo=FALSE,message=FALSE,fig.width=12}
 library("ggplot2")
-x <- read.csv("google.csv")
+library(RCurl)
+y <- getURL("https://raw.githubusercontent.com/rajneesh2017/IT497_GroupAssign_Rajneesh_Mohit_Ekta_Tony/master/Google_RajneeshPandey/google.csv")
+x <- read.csv(text = y)
 ggplot(data=x, aes(x=DAYS, y=TSS, fill=DAYS)) + geom_bar(stat="identity") 
 
 gg <- ggplot(data=x, aes(x=DAYS, y=ASP, fill=DAYS)) + geom_bar(stat="identity")
