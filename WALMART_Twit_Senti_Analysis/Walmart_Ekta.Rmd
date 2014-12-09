@@ -1,0 +1,59 @@
+Twitter Sentiment Analysis Assignment
+========================================================
+
+In this assignment, we are showing that whether Twitter can predict Walmart stock price movement or not. For five days, 01 Dec 2014 to 05 Dec 2014, Twitter has been mined for Walmart tweets. 
+ 
+```{r eval=FALSE, echo=FALSE}
+
+```
+>1) Total number of tweets each day- 200
+
+>2) The sentiment histogram for day 1
+
+![Day 1](https://raw.githubusercontent.com/ektapaliwal/IT497Research/master/Walmart_day1.png)
+
+>2) The sentiment histogram for day 2
+
+![Day 2](https://raw.githubusercontent.com/ektapaliwal/IT497Research/master/Walmart_Day2.png)
+
+>2) The sentiment histogram for day 3
+
+![Day 3](https://raw.githubusercontent.com/ektapaliwal/IT497Research/master/Walmart_day3.png)
+
+>2) The sentiment histogram for day 4
+
+![Day 4](https://raw.githubusercontent.com/ektapaliwal/IT497Research/master/Walmart_day4.png)
+
+>2) The sentiment histogram for day 5
+
+![Day 5](https://raw.githubusercontent.com/ektapaliwal/IT497Research/master/Walmart_day5.png)
+
+>3)The graphs comparing the changes in stock price for 5 days to the actual stock price changes:
+
+```{r eval=TRUE,echo=FALSE,message=FALSE,fig.width=12}
+library("ggplot2")
+Walmart <- read.csv("TwitterWalmart.csv")
+ggplot(data=Walmart, aes(x=DAY, y=SentimentSCORE, fill=DAY)) + geom_bar(stat="identity") 
+
+gg <- ggplot(data=Walmart, aes(x=DAY, y=ActualPrice, fill=DAY)) + geom_bar(stat="identity")
+gg + coord_cartesian()
+
+```
+
+This table shows Total sentiment score(TSS) and actual stock price(ASP) for five days
+```{r echo=FALSE}
+Walmart
+```
+
+<h3>Findings Section</h3>
+<p>
+For Wal-Mart, I have done sentiment analysis on the tweets of the Walmart for five consecutive days from December 1 to December 5, 2014. We want to predict the stock price of the Walmart on the basis of sentiment analysis score. With the sentiment analysis on the tweets, we can find that what people is tweeting about the company i.e. positive tweet or negative tweet. I have mined twitter data for Walmart tweets and performed sentiment analysis on them. Positive score for sentiment analysis means people are tweeting positive about the company, and the negative score means people are tweeting negatively about the company.
+</p>
+<p>
+For the first day, my sentiment analysis score was positive but the stock price of Walmart was less than the previous day. It reflects that for the first day, there is no correlation between positive sentiment analysis and stock price.  For the next two days, my sentiment analysis score was positive, and the stock price increases over both days. For the fourth day, my sentiment analysis score was negative (-167), and stock price of the Walmart has been decreased by little amount. For the last day, my sentiment analysis score was again negative (-50), and stock price of the Walmart has been reduced by significant amount. The above findings reflect the existence of the correlation between the sentiment analysis and the stock price of the Walmart.
+</p>
+<p>
+According to me, sentiment analysis can predict the stock changes to some extent but it’s not always the case. On comparing the graph for sentiment analysis and the actual stock price, we can see the existence of the correlation between both. But as I said earlier, we cannot assure that sentiment analysis will always be able to predict the score. The above scenario can be happened just by chance.
+
+</p>
+
