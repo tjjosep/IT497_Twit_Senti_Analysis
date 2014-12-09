@@ -6,11 +6,14 @@ Can Twitter Predict Stock Price Movements?
 For five days, mine Twitter for tweets containing mentions of the following firms:
 
 | Firm            | Team Member |
-| :-------------  |:------------|
-| Google          | Rajneesh Kumar Pandey        | 
-| [UPS] [id3]     | Tony Joseph | 
-| Oracle          | Name        | 
-| Walmart         | Name        | 
+| :-------------  |:-------------|
+| [Google] [id1]          | Rajneesh Kumar Pandey        | 
+| [UPS] [id2]     | Tony Joseph | 
+| [Oracle] [id3]          | Ekta Paliwal        | 
+| [Walmart] [id4]         | Mohit Rathore        | 
 
 
-[id3]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/blob/master/UPS_Twit_Senti_Analysis/UPSsentiment.Rmd
+[id1]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/GOOGLE_Twit_Senti_Analysis
+[id2]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/blob/master/UPS_Twit_Senti_Analysis/UPSsentiment.Rmd
+[id3]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/ORACLE_Twit_Senti_Analysis
+[id4]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/WALMART_Twit_Senti_Analysis
