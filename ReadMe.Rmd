@@ -13,7 +13,7 @@ For five days, mine Twitter for tweets containing mentions of the following firm
 | [Walmart] [id4]         | Mohit Rathore        | 
 
 
-[id1]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/GOOGLE_Twit_Senti_Analysis
+[id1]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/blob/master/GOOGLE_Twit_Senti_Analysis/Google_Rajneesh.Rmd
 [id2]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/blob/master/UPS_Twit_Senti_Analysis/UPSsentiment.Rmd
 [id3]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/ORACLE_Twit_Senti_Analysis
 [id4]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/tree/master/WALMART_Twit_Senti_Analysis
