@@ -9,8 +9,8 @@ For five days, mine Twitter for tweets containing mentions of the following firm
 | :-------------  |:-------------|
 | [Google] [id1]          | Rajneesh Kumar Pandey        | 
 | [UPS] [id2]     | Tony Joseph | 
-| [Oracle] [id3]          | Ekta Paliwal        | 
-| [Walmart] [id4]         | Mohit Rathore        | 
+| [Oracle] [id3]          | Mohit Rathore        | 
+| [Walmart] [id4]         | Ekta Paliwal        | 
 
 
 [id1]:https://github.com/tjjosep/IT497_Twit_Senti_Analysis/blob/master/GOOGLE_Twit_Senti_Analysis/Google_Rajneesh.Rmd
