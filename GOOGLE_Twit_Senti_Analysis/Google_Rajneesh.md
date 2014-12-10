@@ -32,7 +32,13 @@ In this assignment, we are showing that whether Twitter can predict Google stock
 
 >The graphs comparing the changes in stock price for 5 days to the actual stock price changes:
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-21.png) ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-22.png) 
+
+
+
+
+
+![graph 1](https://raw.githubusercontent.com/rajneesh2017/graphs/master/unnamed-chunk-21.png)
+![graph 2](https://raw.githubusercontent.com/rajneesh2017/graphs/master/unnamed-chunk-22.png)
 
 # Table
 This table shows Total sentiment score(TSS) and actual stock price(ASP) for five days

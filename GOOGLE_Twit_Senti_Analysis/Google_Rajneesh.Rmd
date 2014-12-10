@@ -90,17 +90,27 @@ sum(simple.sentiment)
 
 >The graphs comparing the changes in stock price for 5 days to the actual stock price changes:
 
-```{r eval=TRUE,echo=FALSE,message=FALSE,fig.width=12}
+```{r echo=FALSE,message=FALSE}
 library("ggplot2")
 library(RCurl)
 y <- getURL("https://raw.githubusercontent.com/rajneesh2017/IT497_GroupAssign_Rajneesh_Mohit_Ekta_Tony/master/Google_RajneeshPandey/google.csv")
+
+```
+
+```{r echo=FALSE,message=FALSE}
 x <- read.csv(text = y)
+
+```
+
+```{r eval=FALSE,echo=FALSE,message=FALSE,fig.width=12}
 ggplot(data=x, aes(x=DAYS, y=TSS, fill=DAYS)) + geom_bar(stat="identity") 
 
 gg <- ggplot(data=x, aes(x=DAYS, y=ASP, fill=DAYS)) + geom_bar(stat="identity")
 gg + coord_cartesian(ylim = c(524, 538))
 
 ```
+![graph 1](https://raw.githubusercontent.com/rajneesh2017/graphs/master/unnamed-chunk-21.png)
+![graph 2](https://raw.githubusercontent.com/rajneesh2017/graphs/master/unnamed-chunk-22.png)
 
 # Table
 This table shows Total sentiment score(TSS) and actual stock price(ASP) for five days
